@@ -8,6 +8,7 @@ module.exports.signup = function (req, res) {
 	if (req.isAuthenticated()) {
 		return res.redirect('back');
 	}
+	alert('Wrong email and password. Try Again!!!')
 	res.render('signup');
 };
 
