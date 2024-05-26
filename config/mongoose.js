@@ -5,6 +5,8 @@ mongoose.set('strictQuery',true);
 // const dotenv = require('.env');
 // const DB = 'mongodb+srv://pawarsubham438:6aO4JOECgoI7Xu71@cluster0.bemtdzm.mongodb.net/mernstack?retryWrites=true&w=majority';
 // dotenv.config({ path: 'config/.env' });
+dotenv.config({ path: '../.env' });
+
 
 //connecting mongoose with database
 //I stored MONGODB_URI in my system veriable for security reason. veriable name MONGODB_URI followed by your mongo atlas link
