@@ -4,10 +4,10 @@ const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-startegy');
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8000;
 
 
-dotenv.config({ path: 'config/.env' });
+dotenv.config({ path: './config/.env' });
 
 const app = express();
 // set ejs as view engine

@@ -5,13 +5,18 @@ mongoose.set('strictQuery',true);
 // const dotenv = require('.env');
 // const DB = 'mongodb+srv://pawarsubham438:6aO4JOECgoI7Xu71@cluster0.bemtdzm.mongodb.net/mernstack?retryWrites=true&w=majority';
 // dotenv.config({ path: 'config/.env' });
-dotenv.config({ path: '../.env' });
+dotenv.config({ path: './config/.env' });
+if (!process.env.MONGODB_URI) {
+	console.error('Error: MONGODB_URI is not defined in environment variables.');
+	process.exit(1); // Exit the process with an error code
+  }
+
 
 
 //connecting mongoose with database
 //I stored MONGODB_URI in my system veriable for security reason. veriable name MONGODB_URI followed by your mongo atlas link
 //for local use you can write this code
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/placement-cell');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/placement-cell');
 
 // mongoose.connect(DB, {
 // 	useNewUrlParser: true,
