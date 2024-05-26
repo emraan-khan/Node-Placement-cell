@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 //connecting mongoose with database
 //I stored MONGODB_URI in my system veriable for security reason. veriable name MONGODB_URI followed by your mongo atlas link
 //for local use you can write this code
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/placement-cell');
+mongoose.connect('mongodb+srv://imrankhan:imraan@000@cluster0.avozraf.mongodb.net/placement-cell?retryWrites=true&w=majority&appName=Cluster0' || 'mongodb://127.0.0.1:27017/placement-cell');
 
 // mongoose.connect(DB, {
 // 	useNewUrlParser: true,
