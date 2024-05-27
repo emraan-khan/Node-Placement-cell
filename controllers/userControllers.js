@@ -8,7 +8,6 @@ module.exports.signup = function (req, res) {
 	if (req.isAuthenticated()) {
 		return res.redirect('back');
 	}
-	alert('Wrong email and password. Try Again!!!')
 	res.render('signup');
 };
 
@@ -22,6 +21,7 @@ module.exports.signin = function (req, res) {
 
 // create session
 module.exports.createSession = function (req, res) {
+	alert('Logged In!!!')
 	console.log('Session created successfully');
 	return res.redirect('/');
 };
