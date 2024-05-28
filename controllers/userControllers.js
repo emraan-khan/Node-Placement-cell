@@ -21,7 +21,6 @@ module.exports.signin = function (req, res) {
 
 // create session
 module.exports.createSession = function (req, res) {
-	alert('Logged In!!!')
 	console.log('Session created successfully');
 	return res.redirect('/');
 };
